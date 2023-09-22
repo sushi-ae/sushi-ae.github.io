@@ -48,6 +48,7 @@ body {
 
 .content a {
     text-decoration: none;
+    font-weight: bold;
     color: #94f7c5;
     line-height: 35px;
 }
