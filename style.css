@@ -15,12 +15,17 @@ body {
     font-family: Arial;
 }
 
+/* make scrollbar go poof (chromium only) */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 .content {
     background-color: var(--brighter-bg);
     margin: auto;
     margin-top: 50px;
     padding: 35px 0;
-    width: 500px;
+    width: 420px;
     border: solid var(--borders);
     border-width: 2px;
     display: grid;
