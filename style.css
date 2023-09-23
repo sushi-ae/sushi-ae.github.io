@@ -4,6 +4,7 @@
     --evenbrighter-bg: #202020;
 
     --borders: #252525;
+    --darker-borders: #1f1f1f;
   
     --fg-normal: #dfdfdf;
     --fg-darker: #cfcfcf;
@@ -26,7 +27,7 @@ body {
     margin-top: 50px;
     padding: 35px 0;
     width: 420px;
-    border: solid var(--borders);
+    border: solid var(--darker-borders);
     border-width: 2px;
     display: grid;
     place-items: center;
