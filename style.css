@@ -1,7 +1,9 @@
 :root {
     --bg: #151515;
-    --brighter-bg: #202020;
-    --evenbrighter-bg: #252525;
+    --brighter-bg: #181818;
+    --evenbrighter-bg: #202020;
+
+    --borders: #252525;
   
     --fg-normal: #dfdfdf;
     --fg-darker: #cfcfcf;
@@ -11,21 +13,29 @@ body {
     background-color: var(--bg);
     color: var(--fg-normal);
     font-family: Arial;
-    text-align: center;
 }
 
 .content {
-    margin: 20px;
+    background-color: var(--brighter-bg);
+    margin: auto;
+    margin-top: 50px;
     padding: 35px 0;
-    text-align: center;
+    width: 500px;
+    border: solid var(--borders);
+    border-width: 2px;
+    display: grid;
+    place-items: center;
+    text-align: left;
 }
 
 .header {
-    background-color: var(--brighter-bg); 
+    background-color: var(--evenbrighter-bg); 
+    border: solid var(--borders);
+    border-width: 2px;
     width: 320px;
     padding: 10px;
     display: inline-block;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .header h2 {
@@ -42,7 +52,6 @@ body {
 .content p {
     display: block;
     line-height: 30px;
-    text-align: center;
     color: var(--fg-darker);
 }
 
