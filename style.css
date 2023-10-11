@@ -51,12 +51,18 @@ body {
 .content header {
     font-size: 1.5rem;
     margin-left: 0.5rem;
+    position: relative;
 }
 
 #sushi {
     background: -webkit-linear-gradient(#ff00d4, #fcee21);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.pron {
+    position: absolute;
+    bottom: -60%;
 }
 
 .sep {
@@ -109,10 +115,4 @@ label::after {
     left: 5px;
     transform: translateY(-50%);
     transition: .5s ease-in-out;
-}
-
-h6 {
-    position: absolute;
-    bottom: 50%;
-    left: 2.1%;
 }
