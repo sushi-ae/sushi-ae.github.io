@@ -28,10 +28,27 @@ body {
     /*top: 50%;*/
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, 10%);
+    transform: translate(-50%, 5%);
     font-family: Poppins,Roboto,sans-serif;
     color: var(--fg);
-    width: 32%;
+    width: 34%;
+}
+
+.post {
+    width: 34%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class="content"] {
+    width: 53%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  [class="post"] {
+    width: 100%;
+  }
 }
 
 .content p {
@@ -56,10 +73,22 @@ body {
     position: relative;
 }
 
-#sushi {
-    background: -webkit-linear-gradient(#ff00d4, #fcee21);
+.sushi {
+    background: linear-gradient(270deg, #ff00d4, #fcee21);
+    background-size: 600% 600%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    animation: Animation 1s linear infinite alternate;
+}
+
+@keyframes Animation { 
+    0% {
+        background-position:top;
+    }
+    100% {
+        background-position:bottom;
+    }
 }
 
 .pron {
