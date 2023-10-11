@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href='../../style.css'/>
+        <script src="../../main.js"></script>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍣</text></svg>"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>sushi</title>
+    </head>
+    <body data-theme="light">
+        <div class='theme-switcher'>
+            <input type="checkbox" id="themeswitcher"/>
+            <label for="themeswitcher">theme</label>
+        </div>
+        <div class='content'>
+            <h2>XCB for the smarter side of stupid people 🍣</h2>
+            <h4>Part 1: The Bare Basics</h4>
+            <p>
+                Now, let's focus on what xcb is. Well xcb is a thing 
+                where you do cool things to make things that are cool.
+                What the fuck does that mean? I don't know.<br>
+                <br>
+                <a href="https://en.wikipedia.org/wiki/XCB#Overview" style="color: #5fa052"><b><i>actually learn more here</i></b></a>
+            </p>
+
+            <h4>The Bare Basics</h4>
+            <p>
+                Every xcb program starts by declaring the xcb connection.
+            </p>
+            <div class="code">
+                <code>
+                    xcb_connection_t *dpy;<br>
+                    dpy = xcb_connect(NULL,NULL);<br>
+                    /* if the values are NULL it gets the display from the $DISPLAY env variable */
+                </code><br>
+            </div>
+            <p>
+                Next we need to declare the screen
+            </p>
+
+            <div class="code">
+                <code>
+                    xcb_screen_t *scr;<br>
+                    scr = xcb_setup_roots_iterator(xcb_get_setup(dpy)).data;
+                </code><br>
+            </div>
+            <p>
+                All of this may seem confusing, BUT, don't worry. It gets worse from here.<br>
+                Now it's time to work on the main function
+            </p>
+            <div class="code">
+                <code>
+                    #include &ltstdio.h&gt<br>
+                    #include &ltxcb/xcb.h&gt<br>
+                    <br>
+                    xcb_connection_t *dpy;<br>
+                    xcb_screen_t *scr;<dpy>
+                    <br>
+                    int main(void){<br>
+                    &nbsp&nbspdpy = xcb_connect(NULL,NULL);<br>
+                    &nbsp&nbspscr = xcb_setup_roots_iterator(xcb_get_setup(dpy)).data;<br>
+                    }
+                </code><br>
+            </div>
+            <p>
+                So like uh, this is what your program should look like rn frfr.
+            </p>
+
+            <div class="code">
+                <code>
+                    /* to close the connection you need to add this to the end of main*/<br>
+                    xcb_disconnect(dpy);
+                </code>
+            </div>
+            <br>
+            <p>
+                Ok this is end of part 1. I refuse to elaborate further so just wait till Part 2 comes out yay goodbye.
+            </p>
+            <a href="https://github.com/sushi-ae" target="_blank"><i class="fa-brands fa-github"></i>&nbsp</a>
+            <a href="https://discord.com/users/897772568000471050" target="_blank"><i class="fa-brands fa-discord"></i>&nbsp</a>
+            <a href="https://github.com/puppywm/puppy" target="_blank"><i class="fa fa-window-maximize"></i>&nbsp</a>
+        </div>
+    </body>
+</html>

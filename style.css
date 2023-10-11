@@ -8,11 +8,13 @@
 
 body[data-theme="dark"] {
     --bg: #0f0f0f;
+    --bg2: #171717;
     --fg: #fafafa;
 }
 
 body[data-theme="light"] {
     --bg: #fefefe;
+    --bg2: #dfdfdf;
     --fg: #404040;
 }
 
@@ -29,7 +31,7 @@ body {
     transform: translate(-50%, 10%);
     font-family: Poppins,Roboto,sans-serif;
     color: var(--fg);
-    width: 30%;
+    width: 32%;
 }
 
 .content p {
@@ -115,4 +117,9 @@ label::after {
     left: 5px;
     transform: translateY(-50%);
     transition: .5s ease-in-out;
+}
+
+.code {
+    background-color: var(--bg2);
+    padding: 10px;
 }
